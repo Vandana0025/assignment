@@ -1,4 +1,24 @@
-<app-header></app-header>
-<app-container></app-container>
-<app-footer-bar></app-footer-bar>
+<div>
+    <div  class="setNav">
+        <mat-nav-list>
+            <mat-list-item >
+                <mat-icon>dehaze</mat-icon>
+            </mat-list-item>
+            <mat-list-item *ngFor="let link of navLinks">
+            <a mat-tab-link 
+                [routerLink]="link.path"
+                routerLinkActive #rla="routerLinkActive"
+            >
+            <mat-icon> {{link.label}} </mat-icon>
+            </a>
+            </mat-list-item>
+        </mat-nav-list>
+    </div>
+    <app-header></app-header>
+
+    <app-container></app-container>
+    <app-footer-bar></app-footer-bar>
+</div>
+
+
 <router-outlet></router-outlet>

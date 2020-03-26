@@ -40,3 +40,8 @@
 .mat-raised-button {
     padding: 0px!important;
 }
+
+.profileImage {
+    height:40px;
+    width:40px;
+}

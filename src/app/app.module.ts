@@ -16,6 +16,7 @@ import { SubscriptionDetailsComponent } from './subscription-details/subscriptio
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { ContainerComponent } from './container/container.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FooterBarComponent } from './footer-bar/footer-bar.component';
     SubscriptionDetailsComponent,
     ImageGalleryComponent,
     ContainerComponent,
-    FooterBarComponent
+    FooterBarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
