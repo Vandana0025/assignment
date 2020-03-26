@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SubscriptionDetailsComponent } from './subscription-details/subscription-details.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { ContainerComponent } from './container/container.component';
+import { FooterBarComponent } from './footer-bar/footer-bar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ContainerComponent } from './container/container.component';
     UserBarComponent,
     SubscriptionDetailsComponent,
     ImageGalleryComponent,
-    ContainerComponent
+    ContainerComponent,
+    FooterBarComponent
   ],
   imports: [
     BrowserModule,

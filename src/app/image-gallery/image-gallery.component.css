@@ -1,7 +1,10 @@
 .imageSize {
-    width:400px;
+    width:600px;
+    padding: 10px;
 }
 
 .imageGallery{
-    width:50vw;
+    width:40vw;
+    max-height: 65vh;
+    overflow-y: auto;
 }

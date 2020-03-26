@@ -1,6 +1,7 @@
 .userbar {
     padding: 10px;
-    width: 100%;
+    width: 70vw;
+    margin: 20px 27px;
     display: block;
     display: inline-flex;
 }

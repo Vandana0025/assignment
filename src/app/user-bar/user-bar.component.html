@@ -40,12 +40,12 @@
     </span>
     <span class="availableWatch togglebar">
       <span>Available </span>
-      <mat-slide-toggle (click)=onToggle($event) id="availableTimer"></mat-slide-toggle>
+      <mat-slide-toggle (changed)=onToggle() id="availableTimer"></mat-slide-toggle>
       <!-- <span>{{availableClock}}</span> -->
     </span>
     <span class="breakWatch  togglebar">
       <span>Break</span>
-        <mat-slide-toggle (click)=resumeBreak() id="breakTimer" ></mat-slide-toggle>
+        <mat-slide-toggle (changed)=resumeBreak($event) id="breakTimer" ></mat-slide-toggle>
       <span>{{breakTime}}</span>
     </span>
   </div>

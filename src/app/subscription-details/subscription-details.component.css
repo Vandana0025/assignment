@@ -1,7 +1,8 @@
 .subComponent {
-    width: 450px;
+    width: 430px;
     font-size:14px;
-    line-height: 2.5;
+    line-height: 2;
+    padding: 10px;
 }
 
 .subTitle  {
@@ -13,6 +14,15 @@
 }
 
 .formatGrid {
-    padding: 3px;
     line-height: 1.5;
+    padding: 0px 10px;
+    display: inline-grid;
+}
+
+.borderLine {
+    border-right: groove;
+}
+
+h3 {
+    color: rgb(27, 209, 233);
 }

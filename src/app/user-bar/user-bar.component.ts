@@ -29,6 +29,7 @@ export class UserBarComponent implements OnInit {
   }
 
   ngOnInit() {
+    
     // Load Basic User Details
     this.fetchdata.getData('https://raw.githubusercontent.com/Vandana-25/vector25/master/userbardetails')
     .subscribe(data => {
@@ -40,17 +41,11 @@ export class UserBarComponent implements OnInit {
     })
 
     this.startTime = new Date();
-    this.breakTime = this.datepipe.transform(0, 'mm:ss');
   }
 
   ngAfterViewChecked() {
-    this.resumeBreak();
+    this.resumeBreak(event);
     this.resumeAvailable();
-  }
-  
-
-  toggle() {
-    this.checked = !this.checked;
   }
 
   // Logic for Available Timer
@@ -61,11 +56,13 @@ export class UserBarComponent implements OnInit {
   }
 
   //Logic to set BreakTimer
-  resumeBreak(){
-    setInterval(() => {
-      this.currTime = new Date();
-      this.breakTime = this.datepipe.transform((this.currTime - this.startTime, 'mm:ss'));
-    },1000); 
+  resumeBreak(event){
+    if(event.target.value) {
+      console.log("toggle event triggered");
+      setInterval(() => {
+        this.currTime = new Date();
+        this.breakTime = this.datepipe.transform((this.currTime - this.startTime, 'mm:ss'));
+      },1000);
+    } 
   }
-
 }

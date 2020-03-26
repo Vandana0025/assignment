@@ -35,14 +35,39 @@ interface City {
 })
 export class DataFormComponent implements OnInit {
   path: any = 'https://raw.githubusercontent.com/Vandana-25/vector25/master/CustomerInfo.json';
-  
+
+  primaryIDType: any;
+  primaryIDNumber:any;
+  firstName: any;
+  dob: any;
+  email: any;
+  altPhone: any;
+  addLine1: any;
+  addLine2: any;
+  addLine3: any;
+  postal: any;
+
   constructor(  private fetchdata: FetchDataService) { }
 
   ngOnInit() {
     this.fetchdata.getData(this.path)
-    .subscribe(data => {
-      
-    })
+      .subscribe(data => {
+        this.primaryIDType = data.primaryIDType,
+        this.primaryIDNumber = data.primaryIDNumber,
+        this.firstName = data.firstName,
+        this.dob = data.dob,
+        this.email = data.email,
+        this.gender = data.gender,
+        this.altPhone = data.altPhone,
+        this.state = data.state,
+        this.district = data.district,
+        this.lga = data.lga,
+        this.city = data.city,
+        this.addLine1 = data.addLine1,
+        this.addLine2 = data.addLine2,
+        this.addLine3 = data.addLine3,
+        this.postal = data.postal
+      })
 
 
     // return this.formBuilder.group({
@@ -73,7 +98,7 @@ export class DataFormComponent implements OnInit {
     {value: 'private', viewValue: 'Private'},
   ];
 
-  cars: City[] = [
+  city: City[] = [
     {value: 'city1', viewValue: 'City 1'},
     {value: 'city2', viewValue: 'City 2'},
     {value: 'city3', viewValue: 'City 3'}

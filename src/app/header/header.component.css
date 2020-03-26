@@ -1,5 +1,5 @@
 .headerCom {
-    height: 80px;
+    height: 60px;
     border:gray;
 
 }
@@ -10,8 +10,10 @@
 
 .search {
     border-radius: 30px;
-    size:5px;
-    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    height: 35px;
+    width: 250px;
+    border-style: hidden;
+    padding: 0px 25px;
 }
 
 .logout {
@@ -21,5 +23,5 @@
 .logoImage {
     height: 50px;
     width: 50px;
-    margin: 10px;
+    margin: 5px;
 }
