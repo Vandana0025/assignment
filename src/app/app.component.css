@@ -1,7 +1,10 @@
 .setNav {
     background-color: #1A293B;
-    width: 80px;
+    width: 60px;
     float: left;
     height: 100vh;
+}
 
+.navDeco {
+    border-bottom: 1px solid whitesmoke;
 }
