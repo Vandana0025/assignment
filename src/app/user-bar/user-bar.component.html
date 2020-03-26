@@ -1,0 +1,52 @@
+<div class="userbar dropShadow">
+  <div>
+    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+    <span class="displayGrid ">
+      <span>{{username}}</span>
+      <span>{{position}}</span>
+    </span>
+  </div>
+
+  <div>
+    <button mat-raised-button class="primary btnSizeColor">
+      <span class="displayGrid ">
+        <span>TOTAL</span>
+        <span>{{total}}</span>
+      </span>
+        
+    </button>
+    <button mat-raised-button class="approved btnSizeColor">
+      <span class="displayGrid ">
+        <span>APPROVED</span>
+      <span>{{approved}}</span>
+      </span>
+    </button>
+    <button mat-raised-button class="rejected btnSizeColor">
+      <span class="displayGrid ">
+        <span>REJECTED</span>
+        <span>{{rejected}}</span>
+      </span>
+    </button>
+  </div>
+
+  <div>
+    <span>
+      <button mat-raised-button class="timerBtn">
+        <span class="displayGrid ">
+          <span>Average Handling Time</span>
+          <span>00:15:00</span>
+        </span>       
+      </button>
+    </span>
+    <span class="availableWatch togglebar">
+      <span>Available </span>
+      <mat-slide-toggle (click)=onToggle($event) id="availableTimer"></mat-slide-toggle>
+      <!-- <span>{{availableClock}}</span> -->
+    </span>
+    <span class="breakWatch  togglebar">
+      <span>Break</span>
+        <mat-slide-toggle (click)=resumeBreak() id="breakTimer" ></mat-slide-toggle>
+      <span>{{breakTime}}</span>
+    </span>
+  </div>
+</div>

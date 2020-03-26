@@ -1,0 +1,18 @@
+.subComponent {
+    width: 450px;
+    font-size:14px;
+    line-height: 2.5;
+}
+
+.subTitle  {
+    color: gray;
+}
+
+.subValue {
+    color:rgb(47, 46, 46);
+}
+
+.formatGrid {
+    padding: 3px;
+    line-height: 1.5;
+}

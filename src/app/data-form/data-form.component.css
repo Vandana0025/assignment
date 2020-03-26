@@ -1,0 +1,18 @@
+mat-label {
+    color: rgb(27, 209, 233);
+    font-size: larger;
+}
+
+h3 {
+    color:red;
+    border-left: 3px solid red;
+    padding: 8px;
+}
+
+mat-form-field{
+    padding: 10px;
+}
+
+.customerDetails {
+    width: 450px;
+}
