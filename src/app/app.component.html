@@ -1,23 +1,20 @@
 <div>
     <div class="setNav">
         <mat-nav-list>
-            <mat-list-item >
+            <mat-list-item>
                 <mat-icon [ngStyle]="{'color':'whitesmoke'}"> dehaze</mat-icon>
             </mat-list-item>
             <mat-list-item *ngFor="let link of navLinks" class="navDeco">
-            <a mat-tab-link 
-                [routerLink]="link.path"
-                routerLinkActive #rla="routerLinkActive"
-            >
-            <mat-icon [ngStyle]="{'color':'whitesmoke','height':'30px'}"> {{link.label}} </mat-icon>
-            </a>
+                <a [routerLink]="link.path" [routerLinkActive]="active">
+                    <mat-icon [ngStyle]="{'color':'whitesmoke','height':'30px'}"> {{link.label}} </mat-icon>
+                </a>
             </mat-list-item>
         </mat-nav-list>
     </div>
     <app-header></app-header>
 
-    <app-container></app-container>
-    <app-footer-bar></app-footer-bar>
+    <!-- <app-container></app-container> -->
+    <!-- <app-footer-bar></app-footer-bar> -->
 </div>
 
 

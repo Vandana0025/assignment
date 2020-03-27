@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, FormBuilder } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppNavComponent } from './app-nav/app-nav.component';
@@ -14,7 +14,6 @@ import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { SubscriptionDetailsComponent } from './subscription-details/subscription-details.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
-import { ContainerComponent } from './container/container.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { LoginComponent } from './login/login.component';
 
@@ -27,9 +26,9 @@ import { LoginComponent } from './login/login.component';
     UserBarComponent,
     SubscriptionDetailsComponent,
     ImageGalleryComponent,
-    ContainerComponent,
+    routingComponents,
     FooterBarComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

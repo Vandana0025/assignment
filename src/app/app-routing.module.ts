@@ -1,17 +1,29 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContainerComponent } from './container/container.component';
+import { Example1Component } from './example1/example1.component';
+import { Example2Component } from './example2/example2.component';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'login',
+  //   pathMatch: 'full',
+  //   component: Login
+  // },
   {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
+    path:'dashboard',
+    component: ContainerComponent
   },
   {
-    path:'Dashboard',
-    component: ContainerComponent
-  }
+    path:'example1',
+    component: Example1Component
+  },
+  {
+    path:'example2',
+    component: Example2Component
+  },
+
 ];
 
 @NgModule({
@@ -19,3 +31,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [ContainerComponent, Example1Component, Example2Component]

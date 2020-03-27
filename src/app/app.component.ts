@@ -10,9 +10,9 @@ export class AppComponent {
   title = 'airtel-theme';
 
   navLinks = [
-    {label:'supervisor_account', path: '/profile'},
+    {label:'supervisor_account', path: '/example1'},
     {label:'dashboard', path: '/dashboard'},
-    {label:'memory', path: '/setting'},
-    {label:'help_outline', path: 'help'}
+    {label:'memory', path: '/example2'},
+    {label:'help_outline', path: '/exmaple1'}
   ]
 }
