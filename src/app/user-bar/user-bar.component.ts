@@ -2,6 +2,8 @@ import { Component, OnInit, } from '@angular/core';
 import {MatButtonModule} from '@angular/material'
 import { DatePipe } from '@angular/common';
 import {FetchDataService } from 'src/app/fetch-data.service';
+import { interval } from 'rxjs';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-user-bar',
@@ -11,6 +13,7 @@ import {FetchDataService } from 'src/app/fetch-data.service';
 })
 export class UserBarComponent implements OnInit {
 
+  // User Details from API 
   username: any;
   position: any;
   total: number;
@@ -18,12 +21,10 @@ export class UserBarComponent implements OnInit {
   rejected: number;
   checked: boolean = true;
 
-
+  // For Break Timer
   startTime: any;
   breakTime: any;
   currTime: any;
-  breakCounter:any;
-  availableClock :any = 900000;
 
   constructor(public datepipe: DatePipe, private fetchdata: FetchDataService) {     
   }
@@ -44,25 +45,46 @@ export class UserBarComponent implements OnInit {
   }
 
   ngAfterViewChecked() {
-    this.resumeBreak(event);
-    this.resumeAvailable();
+    // this.resumeBreak(event);
+    // this.resumeAvailable();
+  }
+
+  convertToTime(num){
+    let minutes, seconds;
+    minutes = num / 60;
+    seconds = num % 60;
+
+    return minutes+":"+seconds;
+
   }
 
   // Logic for Available Timer
   resumeAvailable(){
-    setInterval(() => {
-      this.availableClock = this.datepipe.transform((this.availableClock - 1000), 'mm:ss')
-    },1000);
+
+//     const numbers = interval(1000);
+
+// const takeFourNumbers = numbers.pipe(take(10));
+
+// takeFourNumbers.subscribe(x => console.log('Next: ', x));
+
+    // const numbers = interval(1000);
+    // const availableTimer = numbers.pipe(take(900));
+    // availableTimer.subscribe(x => console.log(x));
+
+    // setInterval(() => {
+    //   this.available = this.convertToTime(this.availableSeconds);
+    //   this.availableSeconds - 1;
+    // },1000);
   }
 
   //Logic to set BreakTimer
   resumeBreak(event){
-    if(event.target.value) {
-      console.log("toggle event triggered");
-      setInterval(() => {
-        this.currTime = new Date();
-        this.breakTime = this.datepipe.transform((this.currTime - this.startTime, 'mm:ss'));
-      },1000);
-    } 
+   // if(event.target.value) {
+      // console.log("toggle event triggered");
+      // setInterval(() => {
+      //   this.currTime = new Date();
+      //   this.breakTime = this.datepipe.transform((this.currTime - this.startTime, 'mm:ss'));
+      // },1000);
+  //  } 
   }
 }

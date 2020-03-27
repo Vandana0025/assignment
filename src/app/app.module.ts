@@ -4,7 +4,6 @@ import { FormsModule, FormBuilder } from '@angular/forms';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppNavComponent } from './app-nav/app-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatSlideToggleModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatInputModule, MatSelectModule } from '@angular/material';
 import { DataFormComponent } from './data-form/data-form.component';
@@ -15,20 +14,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { SubscriptionDetailsComponent } from './subscription-details/subscription-details.component';
 import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
-import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppNavComponent,
     DataFormComponent,
     HeaderComponent,
     UserBarComponent,
     SubscriptionDetailsComponent,
     ImageGalleryComponent,
     routingComponents,
-    FooterBarComponent,
-    LoginComponent,
+    FooterBarComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +43,7 @@ import { LoginComponent } from './login/login.component';
     MatSlideToggleModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

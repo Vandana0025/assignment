@@ -2,8 +2,8 @@
     padding: 10px;
     width: 70vw;
     margin: 20px 27px;
-    display: block;
     display: inline-flex;
+    justify-content: space-between;
 }
 
 .togglebar {
@@ -32,7 +32,7 @@
 }
 
 .timerBtn {
-    background-color: rgb(118, 124, 131);
+    background-color: #1A293B;
     color: whitesmoke;
     border-radius: 10px;
 }
@@ -42,6 +42,6 @@
 }
 
 .profileImage {
-    height:40px;
-    width:40px;
+    height:50px;
+    width:50px;
 }

@@ -4,18 +4,16 @@
             <mat-list-item>
                 <mat-icon [ngStyle]="{'color':'whitesmoke'}"> dehaze</mat-icon>
             </mat-list-item>
-            <mat-list-item *ngFor="let link of navLinks" class="navDeco">
-                <a [routerLink]="link.path" [routerLinkActive]="active">
-                    <mat-icon [ngStyle]="{'color':'whitesmoke','height':'30px'}"> {{link.label}} </mat-icon>
+            <span *ngFor="let link of navLinks">
+                <a [routerLink]="link.path" routerLinkActive="activeNav">
+                    <mat-list-item class="navDeco" id="navLink">
+                        <mat-icon [ngStyle]="{'color':'whitesmoke'}"> {{link.label}} </mat-icon>
+                    </mat-list-item>
                 </a>
-            </mat-list-item>
+            </span>
         </mat-nav-list>
     </div>
     <app-header></app-header>
-
-    <!-- <app-container></app-container> -->
-    <!-- <app-footer-bar></app-footer-bar> -->
 </div>
-
 
 <router-outlet></router-outlet>
